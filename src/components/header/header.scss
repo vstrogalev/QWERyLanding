@@ -1,0 +1,74 @@
+@import '../globals/variables';
+
+.header {
+  padding: 84px 66px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.24px;
+    text-transform: capitalize;
+  }
+
+  &__menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5vw;
+    list-style: none;
+  }
+
+  &__menu-link {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    &:hover {
+      color: $ac;
+      font-size: 22px;
+      transition: all .8s;
+    }
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: $tc;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $ac;
+    transition: color .8s;
+  }
+
+  &:hover svg {
+    fill: $ac;
+    scale: 1.1;
+    transition: all .8s;
+  }
+
+  &:hover &__icon-text {
+    font-size: 20px;
+    transition: font-size .8s;
+  }
+
+  &__icon {
+    fill: $tc;
+  }
+
+  &__icon-text {
+    color: inherit;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+

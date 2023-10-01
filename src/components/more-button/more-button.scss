@@ -1,0 +1,18 @@
+.more-button {
+  display: inline-block;
+  color: $ac;
+  background-color: transparent;
+  text-align-last: left;
+  cursor: pointer;
+  &::after {
+    content: '';
+    mask: url(../../images/arrow_downward_24px.svg);
+    rotate: -90deg;
+    translate: 15px 8px;
+    mask-size: cover;
+    inline-size: 16px;
+    block-size: 24px;
+    display: inline-block;
+    background-color: $ac;
+  }
+}

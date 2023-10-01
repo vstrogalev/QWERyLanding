@@ -8,6 +8,11 @@ body {
   background-color: $bgc;
   color: $tc;
   margin: 0;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 177.778%;
 }
 
 h1,
@@ -16,12 +21,24 @@ h3,
 h4,
 h5,
 h6,
+ul,
+li,
 p {
   margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
 }
 
 img {
+  display: block;
   width: 100%;
+}
+
+button {
+  border: none;
 }
 
 a {
@@ -29,12 +46,8 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: $tablet-size) {
-  body {
-    background-color: tomato;
-  }
-}
+// @media (max-width: $tablet-size) {
+//   body {
+//     background-color: tomato;
+//   }
+// }

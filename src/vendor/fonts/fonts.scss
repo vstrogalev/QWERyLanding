@@ -1,0 +1,10 @@
+@font-face {
+  font-weight: 400 700;
+  font-family: 'Open Sans';
+  src:
+    local('Open Sans'),
+    url(./fonts/OpenSans-VariableFont.ttf) format('truetype supports variations'),
+    url(./fonts/OpenSans-VariableFont.ttf) format('truetype-variations'),
+    url(./fonts/OpenSans-VariableFont.ttf) format('truetype');
+  font-display: swap;
+}

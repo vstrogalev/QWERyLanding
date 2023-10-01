@@ -1,14 +1,246 @@
-@import '../components/list/list';
-@import '../components/card/card';
-@import '../components/content-section/content-section';
-@import '../components/tooltip/tooltip';
+@import '../components/header/header';
+@import '../mixins/subtitle';
+@import '../components/more-button/more-button.scss';
+
+.main {
+  position: relative;
+  margin: auto;
+  padding: 196px 66px 0;
+}
+
+.title-wrapper {
+  margin: auto;
+  inline-size: min(950px, 70%);
+  position: relative;
+}
+
+.title {
+  margin-block-start: 32px;
+  font-size: 88px;
+  font-weight: 400;
+  line-height: 100px;
+  text-transform: capitalize;
+  &_accent {
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 104.167%;
+  }
+}
+
+.social {
+  position: absolute;
+  transform: rotate(90deg);
+  top: 359px;
+  left: -32px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  &__text {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+  }
+  &__list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  &__link {
+    display: block;
+    inline-size: 24px;
+    block-size: 24px;
+  }
+  &__icon {
+    width: 100%;
+    fill: $tc;
+    &:hover {
+      fill: $ac;
+      transition: fill .8s;
+    }
+  }
+}
+
+.scroll-down {
+  background-color: transparent;
+  color: $tc;
+  margin: 126px auto 0;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  animation: scroll-down_bounce .8s infinite linear alternate;
+  cursor: pointer;
+  &::after {
+    content: '';
+    mask: url(../../images/arrow_downward_24px.svg);
+    mask-size: cover;
+    inline-size: 16px;
+    block-size: 24px;
+    display: inline-block;
+    background-color: $tc;
+    position: relative;
+    top: 5px;
+    left: 8px;
+  }
+}
+
+@keyframes scroll-down_bounce {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(10px);
+  }
+
+}
+
+.holiday {
+  margin-block-start: 730px;
+  min-block-size: 720px;
+  padding: 0 228px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 232px;
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  &__title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: normal;
+  }
+  &__content {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 177.778%;
+  }
+}
+
+.climb {
+  margin-block-start: 230px;
+  position: relative;
+  padding: 0 228px;
+}
+
+.slider-container {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  min-block-size: 985px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+
+  &__card {
+    &-image {
+      inset: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+      object-position: center;
+      // z-index: -1;
+    }
+    &-content {
+      position: absolute;
+      bottom: 42px;
+      left: 50%;
+      translate: -50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: center;
+      z-index: 1;
+    }
+    &-subtitle {
+      color: $ac;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-block-end: 24px;
+      &::before {
+        content: '';
+        position: relative;
+        left: -104px;
+        top: 13px;
+        display: block;
+        inline-size: 72px;
+        block-size: 2px;
+        background-color: #FFC178;
+        z-index: 1;
+      }
+      &::after {
+        content: '';
+        position: relative;
+        right: -124px;
+        top: -12px;
+        display: block;
+        inline-size: 72px;
+        block-size: 2px;
+        background-color: #FFC178;
+        z-index: 1;
+      }
+    }
+
+    &-title {
+      color: $tc;
+      text-align: center;
+      font-family: Open Sans;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-block-end: 27px;
+    }
+
+    &-text {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 177.778%;
+      margin-block-end: 39px;
+    }
+  }
 
 
-.content-section {
-  &_bg_blue {
-    background-color: skyblue;
-  }
-  &_bg_pink {
-    background-color: pink;
-  }
+
+}
+
+
+
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: $tc;
+  cursor: pointer;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
 }

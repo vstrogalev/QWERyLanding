@@ -1,0 +1,22 @@
+.subtitle {
+  position: relative;
+  display: inline-block;
+  left: 104px;
+  color: #FFC178;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  &::before {
+    content: '';
+    position: relative;
+    left: -104px;
+    top: 13px;
+    display: block;
+    inline-size: 72px;
+    block-size: 2px;
+    background-color: #FFC178;
+    z-index: 1;
+  }
+}

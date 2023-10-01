@@ -1,2 +1,13 @@
 @import '../globals/variables';
 @import '../globals/globals';
+@import '../vendor/fonts/fonts.scss';
+
+.page {
+  background-image:
+    image-set(
+      url("../../images/head_bg.webp") type("image/webp"),
+      url("../../images/head_bg.jpg") type("image/jpeg"));
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100vw
+}

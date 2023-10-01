@@ -1,12 +1,13 @@
 block variables
 
 doctype html
-html(lang="ru")
+html(lang="en")
   head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     title= title
     link(rel="stylesheet", href="/bundle.css")
     link(rel="stylesheet", href= pageStylesheet)
-  body.default-layout
+  body.page
+    include ../components/header/header.pug
     block content
