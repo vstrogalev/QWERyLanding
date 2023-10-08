@@ -1,0 +1,153 @@
+.footer {
+  padding: 0 228px;
+  margin-block-end: 118px;
+  color: rgba(255 255 255 / 0.5);
+
+  &__top {
+    display: flex;
+    block-size: 125px;
+    justify-content: space-between;
+    align-items: start;
+    border-bottom: 2px solid rgba(255 255 255 / 0.3);
+  }
+
+  &__logo {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    text-transform: capitalize;
+  }
+
+  &__middle {
+    padding-block-start: 55px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 96px;
+    margin-bottom: 101px;
+
+    &-section {
+      padding: 34px 0;
+      &-title {
+        color: #FFD1A0;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.232px;
+        margin-block-end: 18px;
+      }
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      &-link {
+        font-size: 19px;
+        font-weight: 400;
+        letter-spacing: -0.205px;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 0 41px;
+    margin-bottom: 156px;
+  }
+  &__social {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &__social a {
+    transform: rotate(0deg);
+  }
+}
+
+.ready {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+
+  &__text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.3px;
+  }
+
+  &__button {
+    color: #000;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 24px 69px;
+    border-radius: 8px;
+    background: #FFA343;
+  }
+}
+
+.email-request {
+  max-inline-size: 50%;
+  color: #fff;
+
+  &__header {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.3px;
+    margin-block-end: 50px;
+  }
+  &-form {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255 255 255 / 0.3);
+
+    &__email {
+      background-color: transparent;
+      font-family: 'DM Sans', sans-serif;
+      block-size: 70px;
+      padding: 19px 0 31px 15px;
+      outline: none;
+      border: none;
+      color: #FFF;
+    }
+
+    &__btn {
+      inline-size: 70px;
+      block-size: 70px;
+      background-color: #FFA343;
+      border-radius: 8px;
+    }
+  }
+}
+
+.terms {
+  display: flex;
+  gap: 70px;
+
+  &__link {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.205px;
+  }
+}
+
+.copyright {
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 177.778%;
+}

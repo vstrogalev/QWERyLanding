@@ -1,11 +1,14 @@
-@import '../components/header/header';
+@import '../globals/variables';
+@import '../globals/globals';
 @import '../mixins/subtitle';
-@import '../components/more-button/more-button.scss';
+@import '../components/more-button/more-button';
+@import '../components/footer/footer';
 
 .main {
   position: relative;
   margin: auto;
   padding: 196px 66px 0;
+  margin-block-end: 730px;
 }
 
 .title-wrapper {
@@ -39,8 +42,9 @@
     font-size: 18px;
     font-weight: 600;
     line-height: normal;
+    font-style: normal;
   }
-  &__list {
+  &-list {
     display: flex;
     gap: 20px;
     align-items: center;
@@ -49,6 +53,7 @@
     display: block;
     inline-size: 24px;
     block-size: 24px;
+    transform: rotate(-90deg);
   }
   &__icon {
     width: 100%;
@@ -95,10 +100,10 @@
 
 }
 
-.holiday {
-  margin-block-start: 730px;
+.section {
   min-block-size: 720px;
   padding: 0 228px;
+  margin-block-end: 250px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -131,6 +136,7 @@
   margin-block-start: 230px;
   position: relative;
   padding: 0 228px;
+  margin-block-end: 250px;
 }
 
 .slider-container {
@@ -151,7 +157,6 @@
       block-size: 100%;
       object-fit: cover;
       object-position: center;
-      // z-index: -1;
     }
     &-content {
       position: absolute;
@@ -215,13 +220,7 @@
       margin-block-end: 39px;
     }
   }
-
-
-
 }
-
-
-
 
 .prev-button,
 .next-button {

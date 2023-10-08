@@ -8,7 +8,7 @@ block content
   section.main
     address.social
       .social__text Follow us
-      ul.social__list
+      ul.social-list
         li
           a.social__link(href="#0")
             svg.social__icon(xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none")
@@ -32,10 +32,10 @@ block content
       h1.title #[span.title_accent Discover] #[br]Wonderful Indonesia
       button.scroll-down Scroll down
 
-  section.holiday
-    picture.holiday__image
+  section.section
+    picture.section__image
       source(srcset="../images/holiday.webp" type="image/webp")
-      img.card__image(src="../images/holiday.jpg" alt="woman in yellow dress surronded by mountains")
+      img(src="../images/holiday.jpg" alt="woman in yellow dress surronded by mountains" loading="lazy")
     article.card
       include ../mixins/subtitle
       +subtitle('EAST nUSA TENGGARA')
@@ -49,27 +49,24 @@ block content
         .slider__card
           picture.slider__card-image
             source(srcset="../images/mountains.webp" type="image/webp")
-            img(src="../images/mountains.jpg" alt="mountains")
+            img(src="../images/mountains.jpg" alt="mountains" loading="lazy")
           .slider__card-content
             .slider__card-subtitle Bromo
             h2.slider__card-title Steady your steps, we will climb together!
             p.slider__card-text Enjoying the vast expanse of the sea of ​​​​sand, witnessing the splendor of Mount Semeru that soars into the sky, and gazing at the beauty of the sun moving out of its bed or otherwise enjoying the dim twilight from the Bromo ridge is an unforgettable experience when visiting Bromo.
             include ../components/more-button/more-button
-
-
       button.prev-button(aria-label="See previous slide") &lt;
       button.next-button(aria-label="See next slide") &gt;
 
+  section.section
+    article.card
+      include ../mixins/subtitle
+      +subtitle('INDONESIAN CULTURE')
+      h2.card__title Our culture here is very friendly to people
+      p.card__content known for his politeness, manners and gentleness. This becomes a characteristic when they mingle with other tribes and become basic traits that are passed down by their ancestors.
+      include ../components/more-button/more-button
+    picture.section__image
+      source(srcset="../images/culture.webp" type="image/webp")
+      img(src="../images/culture.jpg" alt="two girls are sitting and smiling" loading="lazy")
 
-
-
-
-
-  //- section.content-section.content-section_type_centered.content-section_bg_blue
-  //-   block section-content
-  //-     include ../components/card/card.pug
-  //-     +card('https://doka.guide/tools/how-to-test-and-why/images/covers/mobile.svg', 'Hello, I love you!')
-  //- section.content-section.content-section_type_centered.content-section_bg_pink
-  //-   block section-content
-  //-     include ../components/list/list.pug
-  //-     +list([{link: 'https://doka.guide', linkText: 'Doka'}, {link: 'https://web-standards.ru/', linkText: 'Веб-стандарты'}])
+  include ../components/footer/footer.pug

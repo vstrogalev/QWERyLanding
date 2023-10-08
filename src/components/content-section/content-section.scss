@@ -1,7 +1,0 @@
-@import '../../mixins/content-sections';
-
-.content-section {
-  &_type_centered {
-    @include centered-section(100vh, 100%);
-  }
-}

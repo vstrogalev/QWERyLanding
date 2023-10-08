@@ -8,3 +8,14 @@
     url(./fonts/OpenSans-VariableFont.ttf) format('truetype');
   font-display: swap;
 }
+
+@font-face {
+  font-weight: 400 700;
+  font-family: 'DM Sans';
+  src:
+    local('DM Sans'),
+    url(./fonts/DMSans-VariableFont.ttf) format('truetype supports variations'),
+    url(./fonts/DMSans-VariableFont.ttf) format('truetype-variations'),
+    url(./fonts/DMSans-VariableFont.ttf) format('truetype');
+  font-display: swap;
+}
