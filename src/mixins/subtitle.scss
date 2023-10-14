@@ -1,22 +1,31 @@
 .subtitle {
   position: relative;
   display: inline-block;
-  left: 104px;
+  left: clamp(1.25rem, -0.0243rem + 5.4369vw, 6.5rem);
   color: #FFC178;
-  font-size: 18px;
+  font-size: clamp(0.625rem, 0.5036rem + 0.5178vw, 1.125rem);
   font-weight: 700;
-  line-height: normal;
+  line-height: 1.1;
   letter-spacing: 6px;
   text-transform: uppercase;
   &::before {
     content: '';
     position: relative;
-    left: -104px;
-    top: 13px;
+    left: -5vw;
+    top: 9px;
     display: block;
-    inline-size: 72px;
+    inline-size: clamp(0.875rem, -0.0049rem + 3.754vw, 4.5rem);
     block-size: 2px;
     background-color: #FFC178;
     z-index: 1;
+  }
+}
+
+@media (width <= 768px) {
+  .subtitle {
+    letter-spacing: normal;
+    &::before {
+      top: 7px;
+    }
   }
 }

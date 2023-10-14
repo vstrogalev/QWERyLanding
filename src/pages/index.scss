@@ -3,12 +3,13 @@
 @import '../mixins/subtitle';
 @import '../components/more-button/more-button';
 @import '../components/footer/footer';
+@import './media';
 
 .main {
   position: relative;
   margin: auto;
-  padding: 196px 66px 0;
-  margin-block-end: 730px;
+  padding: 10% 66px 0;
+  margin-block-end: 40vw;
 }
 
 .title-wrapper {
@@ -19,12 +20,12 @@
 
 .title {
   margin-block-start: 32px;
-  font-size: 88px;
+  font-size: clamp(1rem, -0.0922rem + 4.6602vw, 5.5rem);
   font-weight: 400;
-  line-height: 100px;
+  line-height: clamp(1.5rem, 0.3471rem + 4.9191vw, 6.25rem);
   text-transform: capitalize;
   &_accent {
-    font-size: 96px;
+    font-size: clamp(1.5rem, 0.4078rem + 4.6602vw, 6rem);
     font-weight: 700;
     line-height: 104.167%;
   }
@@ -103,11 +104,11 @@
 .section {
   min-block-size: 720px;
   padding: 0 228px;
-  margin-block-end: 250px;
+  margin-block-end: 17.2%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 232px;
+  gap: 15.8%;
   &__image {
     width: 100%;
     object-fit: cover;
@@ -120,7 +121,7 @@
   flex-direction: column;
   gap: 27px;
   &__title {
-    font-size: 64px;
+    font-size: clamp(1rem, 0.2718rem + 3.1068vw, 4rem);
     font-weight: 700;
     line-height: normal;
   }
@@ -133,23 +134,18 @@
 }
 
 .climb {
-  margin-block-start: 230px;
   position: relative;
   padding: 0 228px;
   margin-block-end: 250px;
 }
 
-.slider-container {
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  min-block-size: 985px;
-}
-
 .slider {
-  display: flex;
   transition: transform 0.5s ease-in-out;
-
+  &-container {
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
   &__card {
     &-image {
       inset: 0;
@@ -160,7 +156,13 @@
     }
     &-content {
       position: absolute;
-      bottom: 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: center;
+      inline-size: max(auto, 70%);
+      inline-size: 70%;
+      bottom: 15%;
       left: 50%;
       translate: -50%;
       display: flex;
@@ -205,7 +207,7 @@
       color: $tc;
       text-align: center;
       font-family: Open Sans;
-      font-size: 64px;
+      font-size: clamp(1.5rem, 0.8932rem + 2.589vw, 4rem);
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -214,7 +216,7 @@
 
     &-text {
       text-align: center;
-      font-size: 18px;
+      font-size: clamp(0.5rem, 0.3483rem + 0.6472vw, 1.125rem);
       font-weight: 600;
       line-height: 177.778%;
       margin-block-end: 39px;

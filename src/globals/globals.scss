@@ -1,3 +1,7 @@
+:root {
+  font-size: 16px;
+}
+
 *,
 *::after,
 *::before {
@@ -9,7 +13,7 @@ body {
   color: $tc;
   margin: 0;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: clamp(0.5rem, 0.3483rem + 0.6472vw, 1.125rem);
   font-style: normal;
   font-weight: 600;
   line-height: 177.778%;

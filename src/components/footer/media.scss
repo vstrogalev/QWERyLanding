@@ -1,0 +1,43 @@
+@media (width <= 1440px) {
+  .footer {
+    padding: 0 10%;
+    &__top {
+      block-size: unset;
+      padding-block-end: clamp(0.5rem, 0.1663rem + 1.4239vw, 1.875rem);
+    }
+    &__logo {
+      font-size: clamp(1.5rem, 1.1359rem + 1.5534vw, 3rem);
+    }
+    &__middle {
+      padding-block-start: clamp(0.625rem, -0.0728rem + 2.9773vw, 3.5rem);
+    }
+  }
+
+  .ready {
+    &__text {
+      font-size: clamp(0.625rem, 0.443rem + 0.7767vw, 1.375rem);
+    }
+    &__button {
+      padding: clamp(0.5rem, 0.2573rem + 1.0356vw, 1.5rem) clamp(1.5rem, 0.8174rem + 2.9126vw, 4.3125rem);
+      font-size: clamp(0.5rem, 0.3483rem + 0.6472vw, 1.125rem);
+    }
+  }
+
+  .email-request {
+    &__header {
+      font-size: clamp(1.375rem, 1.1626rem + 0.9061vw, 2.25rem);
+      margin-block-end: clamp(1.375rem, 0.8rem + 1.8123vw, 3.125rem);
+    }
+    &-form {
+      &__email {
+        block-size: unset;
+        padding: clamp(0.5rem, 0.3331rem + 0.712vw, 1.1875rem) 5px clamp(0.625rem, 0.1rem + 1.3vw, 2rem) clamp(0.3125rem, 0.1608rem + 0.6472vw, 0.9375rem);
+      }
+      &__btn {
+        --size: clamp(1.875rem, 1.2682rem + 2.589vw, 4.375rem);
+        inline-size: var(--size);
+        block-size: var(--size);
+      }
+    }
+  }
+}
