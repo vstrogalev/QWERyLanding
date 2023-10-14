@@ -50,8 +50,9 @@ a {
   text-decoration: none;
 }
 
-// @media (max-width: $tablet-size) {
-//   body {
-//     background-color: tomato;
-//   }
-// }
+.container {
+  padding-inline-start: clamp(1.25rem, 0.5522rem + 2.9773vw, 4.125rem);
+  padding-inline-end: clamp(1.25rem, 0.5522rem + 2.9773vw, 4.125rem);
+  max-inline-size: 1440px;
+  margin: auto;
+}

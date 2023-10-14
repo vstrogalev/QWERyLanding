@@ -1,6 +1,5 @@
 @media (width <= 1440px) {
   .section {
-    padding: 0 10%;
     gap: 5%;
     min-block-size: 0;
     margin-block-end: 10%;
@@ -8,7 +7,6 @@
 
   .climb {
     margin-block-start: 0;
-    padding: 0 10%;
     margin-block-end: 10%;
   }
 
@@ -49,7 +47,7 @@
 
   .social {
     top: 60%;
-    left: -8%;
+    left: -6%;
     &__text {
       font-size: clamp(0.5rem, 0.3483rem + 0.6472vw, 1.125rem);
     }
@@ -58,15 +56,37 @@
     }
     &__link {
       inline-size: clamp(0.625rem, 0.4126rem + 0.9061vw, 1.5rem);
-    }
-    &__icon {
-      inline-size: clamp(0.625rem, 0.4126rem + 0.9061vw, 1.5rem);
+      block-size: clamp(0.625rem, 0.4126rem + 0.9061vw, 1.5rem);
     }
   }
 
   .title-wrapper {
     inline-size: 70%;
+  }
 
+  .section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+    &__image {
+      margin-block-end: 10%;
+    }
+  }
+
+  .slider {
+    &__card {
+      &-title {
+        font-size: clamp(0.75rem, 0.2729rem + 2.0356vw, 1.25rem);
+      }
+      &-text {
+        font-size: clamp(0.375rem, 0.2557rem + 0.5089vw, 0.5rem);
+      }
+    }
+  }
+
+  .card {
+    gap: clamp(0.625rem, -0.3888rem + 4.3257vw, 1.6875rem);
+    margin-block-end: clamp(0.625rem, -0.3888rem + 4.3257vw, 1.6875rem);
   }
 
 }

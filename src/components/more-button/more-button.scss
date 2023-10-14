@@ -3,16 +3,23 @@
   color: $ac;
   background-color: transparent;
   text-align-last: left;
+  font-size: clamp(0.5rem, 0.3483rem + 0.6472vw, 1.125rem);
   cursor: pointer;
   &::after {
     content: '';
     mask: url(../../images/arrow_downward_24px.svg);
-    rotate: -90deg;
-    translate: 15px 8px;
-    mask-size: cover;
-    inline-size: 16px;
-    block-size: 24px;
     display: inline-block;
+    rotate: -90deg;
+    translate: clamp(0.5rem, 0.0229rem + 2.0356vw, 1rem) clamp(0.25rem, 0.0115rem + 1.0178vw, 0.5rem);
+    mask-size: cover;
+    inline-size: clamp(.5rem,.02rem + 1.3vw,1rem);
+    aspect-ratio: 1/1.5;
     background-color: $ac;
+  }
+}
+
+@media (width <= 768px) {
+  .more-button::after {
+    translate: clamp(.5rem,.02rem + 1.3vw,1rem) clamp(.25rem,.01rem + 0.3178vw,.5rem);
   }
 }

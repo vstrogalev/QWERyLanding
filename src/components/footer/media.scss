@@ -1,6 +1,5 @@
 @media (width <= 1440px) {
   .footer {
-    padding: 0 10%;
     &__top {
       block-size: unset;
       padding-block-end: clamp(0.5rem, 0.1663rem + 1.4239vw, 1.875rem);
@@ -39,5 +38,36 @@
         block-size: var(--size);
       }
     }
+  }
+}
+
+@media (width <= 768px) {
+  .footer {
+    padding: 0 5%;
+    &__middle {
+      gap: clamp(0.625rem, -0.3292rem + 4.0712vw, 1.625rem);
+    }
+  }
+  .email-request {
+    max-inline-size: unset;
+  }
+}
+
+@media (width <= 425px) {
+  .footer {
+    &__logo {
+      font-size: clamp(0.75rem, -2.0625rem + 12vw, 1.125rem);
+    }
+    &__middle {
+      display: flex;
+      flex-direction: column;
+
+    }
+  }
+  .email-request__header {
+    font-size: clamp(0.75rem, -2.0625rem + 12vw, 1.125rem);
+  }
+  .terms__link {
+    font-size: clamp(0.375rem, -1.5rem + 8vw, 0.625rem);
   }
 }
